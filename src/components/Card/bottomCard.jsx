@@ -9,7 +9,7 @@ export default function BottomCard() {
           src="https://cdn.blablacar.com/user-profile-picture/tr5q9NSBc8G3hUQbxoviTd/thumbnail_144x144.jpeg"
           className="h-16 rounded-full border-blue-400 border-2 border-solid"
         />
-        <p className="">Drivers Name</p>
+        <p className="px-2">Drivers Name</p>
       </div>
       <div>Medallas</div>
     </div>

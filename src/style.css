@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.elevate {
+    transition: transform 0.3s ease-in-out;
+}
+
+.elevate:hover {
+  transform: translateY(-3px);
+}
