@@ -10,6 +10,7 @@ namespace gauchadaAPI.Models
         [Required] public string EndCity { get; set; } = string.Empty;
         [Required] public int Price { get; set; }
         [Required] public DateTime StartTime { get; set; }
+        [Required] public DateTime EndTime { get; set; }
         [Required] public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }

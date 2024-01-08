@@ -1,10 +1,10 @@
 import React from 'react';
-import CardComponent from '../../components/Travels/Card/cardComponent';
+import TravelsContainer from '../../components/Travels/TravelsContainer/travelsContainer';
 
 function HomePage() {
   return (
     <div className="App">
-      <CardComponent />
+      <TravelsContainer />
     </div>
   );
 }

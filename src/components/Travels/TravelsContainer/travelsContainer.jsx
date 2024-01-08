@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import CardComponent from '../Card/cardComponent';
-import Travel from '../../../models/travel.class';
+import { Travel } from '../../../models/travel.class';
 
-export default function TravelsContainer() {
+function TravelsContainer() {
   const [travels, setTravels] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://localhost:7056/api/Travels', {
+        const response = await fetch('https://localhost:7037/api/Travels', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ export default function TravelsContainer() {
 
         const data = await response.json();
         setTravels(
-          data.map((taskData) => (
+          data.map((data) => (
             <CardComponent key={data.id} travel={new Travel(data)} />
           )),
         );
@@ -33,5 +33,12 @@ export default function TravelsContainer() {
     fetchData();
   }, []);
 
-  return <div className="bg-slate-400">{Travels}</div>;
+  return (
+    <div className="bg-slate-400">
+      {/* <CardComponent travel={defTravel} /> */}
+      {travels}
+    </div>
+  );
 }
+
+export default TravelsContainer;

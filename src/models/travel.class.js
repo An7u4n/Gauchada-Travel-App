@@ -5,7 +5,8 @@ export class Travel {
     this.originCity = data.originCity || '';
     this.endCity = data.endCity || '';
     this.price = data.price;
-    this.startTime = data.startTime || '';
-    this.createdAt = data.createdAt || '';
+    this.startTime = new Date(data.startTime) || '';
+    this.endTime = new Date(data.endTime) || '';
+    this.createdAt = new Date(data.createdAt) || '';
   }
 }

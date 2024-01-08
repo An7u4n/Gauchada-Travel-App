@@ -11,8 +11,8 @@ CardComponent.propTypes = {
 export default function CardComponent({ travel }) {
   return (
     <li className="p-4 max-w-xl bg-white shadow-2xl elevate h-52 rounded-3xl block">
-      <TopCard />
-      <BottomCard />
+      <TopCard travel={travel} />
+      <BottomCard travel={travel} />
     </li>
   );
 }
