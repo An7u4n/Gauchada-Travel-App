@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppRoutingOne from './AppRoutingOne';
+import PageHeader from './components/pageHeader';
+// import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <PageHeader />
+    {/* <App /> */}
+    <AppRoutingOne />
   </React.StrictMode>,
 );
 reportWebVitals();
