@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import HomePage from './pages/home/HomePage';
 import NotFoundPage from './pages/404/NotFoundPage';
-import AddTravelCar from './components/Travels/Card/addTravelCar';
+import AddTravelCar from './components/Travels/Card/addTravelCard';
 import Logo from './images/Logo.png';
 
 function AppRoutingOne() {
