@@ -20,11 +20,7 @@ function TravelsContainer() {
         }
 
         const data = await response.json();
-        setTravels(
-          data.map((data) => (
-            <CardComponent key={data.id} travel={new Travel(data)} />
-          )),
-        );
+        setTravels(data.map((data) => <CardComponent key={data.id} travel={new Travel(data)} />));
       } catch (error) {
         console.error('Error:', error);
       }
@@ -34,9 +30,9 @@ function TravelsContainer() {
   }, []);
 
   return (
-    <div className="bg-slate-400">
+    <div className="bg-slate-400 w-full items-center">
+      <div className="flex mx-auto">{travels}</div>
       {/* <CardComponent travel={defTravel} /> */}
-      {travels}
     </div>
   );
 }
