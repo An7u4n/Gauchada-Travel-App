@@ -25,9 +25,9 @@ export default function CardComponent({ travel }) {
   };
 
   return (
-    <Link to={'/Travels/' + travel.id} className="cursor-default">
-      <li className="p-4 w-[576px] group bg-white shadow-2xl elevate h-52 rounded-3xl block relative m-4">
-        {/* Top Card */}
+    <li className="p-4 w-[576px] group bg-white shadow-2xl elevate h-52 rounded-3xl block relative m-4">
+      {/* Top Card */}
+      <Link to={'/Travels/' + travel.id} className="cursor-default">
         <div className="flex justify-between h-2/3">
           <div className="flex justify-between">
             <div className="px-2">
@@ -55,12 +55,11 @@ export default function CardComponent({ travel }) {
           </div>
           <div>Medallas</div>
         </div>
-
-        {/* X para borrar */}
-        <div className="absolute bottom-2 right-2 cursor-pointer bg-red-500 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" onClick={deleteTravel}>
-          X
-        </div>
-      </li>
-    </Link>
+      </Link>
+      {/* X para borrar */}
+      <div className="absolute bottom-2 right-2 cursor-pointer bg-red-500 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" onClick={deleteTravel}>
+        X
+      </div>
+    </li>
   );
 }
