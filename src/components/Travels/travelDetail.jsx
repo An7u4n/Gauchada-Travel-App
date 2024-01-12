@@ -29,7 +29,7 @@ export default function TravelDetail() {
     };
 
     fetchData();
-  }, []);
+  }, [id]);
 
   return <div className=" w-[100vw] h-[80vh] flex items-center justify-center">{travel}</div>;
 }

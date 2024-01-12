@@ -8,7 +8,7 @@ CardComponent.propTypes = {
 };
 
 export default function CardComponent({ travel }) {
-  let options = { hour: 'numeric', minute: 'numeric' };
+  let options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric' };
   let startTime = new Intl.DateTimeFormat('es-ES', options).format(travel.startTime);
   let endTime = new Intl.DateTimeFormat('es-ES', options).format(travel.endTime);
   let driverImage = 'https://cdn.blablacar.com/user-profile-picture/tr5q9NSBc8G3hUQbxoviTd/thumbnail_144x144.jpeg';
@@ -31,7 +31,9 @@ export default function CardComponent({ travel }) {
         <div className="flex justify-between h-2/3">
           <div className="flex justify-between">
             <div className="px-2">
-              <p className="pb-2">{startTime}</p>
+              <p className="pb-2">
+                {startTime} {}
+              </p>
               <p className="pt-2">{endTime}</p>
             </div>
             <svg width="20" height="90" xmlns="http://www.w3.org/2000/svg">
